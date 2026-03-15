@@ -246,7 +246,7 @@ function CountdownModal({
           type="button"
           onClick={onClose}
           data-ocid="wellness.meditation.close_button"
-          className="text-gray-400 text-sm hover:text-white"
+          className="text-white text-sm hover:text-white"
         >
           Close
         </button>
@@ -297,7 +297,7 @@ function HydrationRing({
         <span className="text-3xl font-orbitron font-bold text-white">
           {glasses}
         </span>
-        <span className="text-xs text-gray-400">/ {goal}</span>
+        <span className="text-xs text-white">/ {goal}</span>
       </div>
     </div>
   );
@@ -399,7 +399,7 @@ export default function WellnessPage() {
           </span>{" "}
           HUB
         </h1>
-        <p className="text-gray-400 font-exo">Mind. Body. Recovery.</p>
+        <p className="text-cyan-300 font-exo">Mind. Body. Recovery.</p>
       </motion.div>
 
       {/* Today's Tip */}
@@ -456,9 +456,7 @@ export default function WellnessPage() {
           </h2>
           <div className="grid grid-cols-2 gap-4 mb-4">
             <div>
-              <Label className="text-gray-400 text-xs mb-1 block">
-                Bedtime
-              </Label>
+              <Label className="text-white text-xs mb-1 block">Bedtime</Label>
               <Input
                 type="time"
                 value={bedtime}
@@ -468,9 +466,7 @@ export default function WellnessPage() {
               />
             </div>
             <div>
-              <Label className="text-gray-400 text-xs mb-1 block">
-                Wake Time
-              </Label>
+              <Label className="text-white text-xs mb-1 block">Wake Time</Label>
               <Input
                 type="time"
                 value={wakeTime}
@@ -481,7 +477,7 @@ export default function WellnessPage() {
             </div>
           </div>
           <div className="mb-4">
-            <Label className="text-gray-400 text-xs mb-2 block">
+            <Label className="text-white text-xs mb-2 block">
               Sleep Quality
             </Label>
             <div className="flex gap-2">
@@ -518,7 +514,7 @@ export default function WellnessPage() {
             >
               {calcHours()}h
             </span>
-            <span className="text-gray-400 text-sm ml-2">estimated sleep</span>
+            <span className="text-white text-sm ml-2">estimated sleep</span>
           </div>
           <motion.button
             whileHover={{ scale: 1.02 }}
@@ -600,7 +596,7 @@ export default function WellnessPage() {
             <span>💧</span> Hydration Tracker
           </h2>
           <HydrationRing glasses={glasses} />
-          <p className="text-center text-gray-400 text-sm mt-3 mb-5">
+          <p className="text-center text-white text-sm mt-3 mb-5">
             {glasses >= 8
               ? "🎉 Goal reached! Amazing!"
               : `${8 - glasses} more glasses to your goal`}
@@ -680,7 +676,7 @@ export default function WellnessPage() {
                   </span>
                 </div>
               </div>
-              <p className="text-gray-400 text-sm flex-1">{m.description}</p>
+              <p className="text-white text-sm flex-1">{m.description}</p>
               <motion.button
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
@@ -731,9 +727,7 @@ export default function WellnessPage() {
                     {s.title}
                   </h3>
                   <div className="flex items-center gap-2 mt-0.5">
-                    <span className="text-xs text-gray-400">
-                      {s.duration} min
-                    </span>
+                    <span className="text-xs text-white">{s.duration} min</span>
                     <span
                       className="text-xs px-2 py-0.5 rounded-full"
                       style={{
@@ -753,7 +747,7 @@ export default function WellnessPage() {
                 {s.muscles.map((m) => (
                   <span
                     key={m}
-                    className="text-xs px-2 py-0.5 rounded-full bg-white/5 text-gray-400"
+                    className="text-xs px-2 py-0.5 rounded-full bg-white/5 text-white"
                   >
                     {m}
                   </span>
@@ -790,7 +784,7 @@ export default function WellnessPage() {
               >
                 {t.day.slice(0, 3).toUpperCase()}
               </div>
-              <p className="text-gray-400 text-xs leading-relaxed line-clamp-4">
+              <p className="text-white text-xs leading-relaxed line-clamp-4">
                 {t.tip}
               </p>
             </motion.div>

@@ -70,12 +70,12 @@ export default function RegisterPage() {
           >
             Join FORGEFIT
           </h1>
-          <p className="text-gray-400">Create your warrior profile</p>
+          <p className="text-white">Create your warrior profile</p>
         </div>
 
         <div className="space-y-5">
           <div>
-            <Label className="text-gray-300 mb-2 block">Username</Label>
+            <Label className="text-white mb-2 block">Username</Label>
             <Input
               value={username}
               onChange={(e) => setUsername(e.target.value)}
@@ -86,7 +86,7 @@ export default function RegisterPage() {
           </div>
 
           <div>
-            <Label className="text-gray-300 mb-2 block">Fitness Goal</Label>
+            <Label className="text-white mb-2 block">Fitness Goal</Label>
             <Select value={goal} onValueChange={setGoal}>
               <SelectTrigger
                 data-ocid="auth.input"
@@ -99,7 +99,7 @@ export default function RegisterPage() {
                   <SelectItem
                     key={g}
                     value={g}
-                    className="text-gray-300 focus:bg-white/10"
+                    className="text-white focus:bg-white/10"
                   >
                     {g}
                   </SelectItem>
@@ -128,7 +128,7 @@ export default function RegisterPage() {
           )}
         </motion.button>
 
-        <p className="text-center text-gray-500 text-sm mt-6">
+        <p className="text-center text-white text-sm mt-6">
           Already have an account?{" "}
           <a href="/login" className="text-[#8b5cf6] hover:underline">
             Sign in

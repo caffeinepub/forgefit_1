@@ -10,6 +10,7 @@ import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import AdminPage from "./pages/AdminPage";
+import CalisthenicsPage from "./pages/CalisthenicsPage";
 import ChallengesPage from "./pages/ChallengesPage";
 import CommunityPage from "./pages/CommunityPage";
 import DashboardPage from "./pages/DashboardPage";
@@ -147,6 +148,11 @@ const wellnessRoute = createRoute({
   path: "/wellness",
   component: WellnessPage,
 });
+const calisthenicsRoute = createRoute({
+  getParentRoute: () => rootRoute,
+  path: "/calisthenics",
+  component: CalisthenicsPage,
+});
 
 const routeTree = rootRoute.addChildren([
   indexRoute,
@@ -167,6 +173,7 @@ const routeTree = rootRoute.addChildren([
   termsRoute,
   safetyRoute,
   wellnessRoute,
+  calisthenicsRoute,
 ]);
 
 const router = createRouter({ routeTree });

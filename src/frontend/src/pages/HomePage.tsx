@@ -91,10 +91,10 @@ export default function HomePage() {
               </span>
               <span className="text-white">FIT</span>
             </h1>
-            <h2 className="font-exo font-bold text-2xl sm:text-3xl text-gray-300 mb-4">
+            <h2 className="font-exo font-bold text-2xl sm:text-3xl text-white mb-4">
               Forge Your Strength
             </h2>
-            <p className="text-gray-400 text-lg sm:text-xl max-w-2xl mx-auto mb-12 leading-relaxed">
+            <p className="text-white text-lg sm:text-xl max-w-2xl mx-auto mb-12 leading-relaxed">
               The hardest decisions need the strongest will. Build your ultimate
               physique, earn XP, and rise to the top.
             </p>
@@ -160,7 +160,7 @@ export default function HomePage() {
                 >
                   {stat.value}
                 </p>
-                <p className="text-gray-500 text-sm mt-1">{stat.label}</p>
+                <p className="text-white text-sm mt-1">{stat.label}</p>
               </div>
             ))}
           </motion.div>
@@ -170,7 +170,7 @@ export default function HomePage() {
         <motion.div
           animate={{ y: [0, 8, 0] }}
           transition={{ repeat: Number.POSITIVE_INFINITY, duration: 1.5 }}
-          className="absolute bottom-8 left-1/2 -translate-x-1/2 text-gray-500"
+          className="absolute bottom-8 left-1/2 -translate-x-1/2 text-white"
         >
           <div className="w-6 h-10 rounded-full border-2 border-white/20 flex items-start justify-center pt-2">
             <div className="w-1.5 h-1.5 rounded-full bg-[#00d4ff]" />
@@ -192,7 +192,7 @@ export default function HomePage() {
           <h2 className="font-orbitron font-bold text-3xl sm:text-4xl text-white mb-4">
             Why Choose <span style={{ color: "#00d4ff" }}>FORGEFIT</span>?
           </h2>
-          <p className="text-gray-400 max-w-xl mx-auto">
+          <p className="text-white max-w-xl mx-auto">
             Everything you need to transform your fitness journey into an epic
             adventure.
           </p>
@@ -223,7 +223,7 @@ export default function HomePage() {
               <h3 className="font-exo font-bold text-white text-lg mb-2">
                 {feat.title}
               </h3>
-              <p className="text-gray-400 text-sm leading-relaxed">
+              <p className="text-white text-sm leading-relaxed">
                 {feat.description}
               </p>
             </motion.div>
@@ -245,7 +245,7 @@ export default function HomePage() {
           <h2 className="font-orbitron font-bold text-3xl sm:text-4xl text-white mb-4">
             How It <span style={{ color: "#8b5cf6" }}>Works</span>
           </h2>
-          <p className="text-gray-400 max-w-xl mx-auto">
+          <p className="text-white max-w-xl mx-auto">
             Four simple steps to unlock your full potential.
           </p>
         </motion.div>
@@ -288,7 +288,7 @@ export default function HomePage() {
                 <h3 className="font-exo font-bold text-white text-lg mb-2">
                   {step.title}
                 </h3>
-                <p className="text-gray-400 text-sm">{step.desc}</p>
+                <p className="text-white text-sm">{step.desc}</p>
               </motion.div>
             ))}
           </div>

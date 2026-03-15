@@ -20,7 +20,7 @@ export default function CommunityPage() {
         <h1 className="font-orbitron font-black text-3xl text-white mb-2">
           <span style={{ color: "#06ffd4" }}>Community</span>
         </h1>
-        <p className="text-gray-400">Connect with warriors worldwide</p>
+        <p className="text-white">Connect with warriors worldwide</p>
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
@@ -38,7 +38,7 @@ export default function CommunityPage() {
               className="glass-card rounded-2xl p-12 text-center"
               data-ocid="community.feed_item.empty_state"
             >
-              <p className="text-gray-400">
+              <p className="text-white">
                 No activity yet. Be the first to complete a workout!
               </p>
             </div>
@@ -75,12 +75,12 @@ export default function CommunityPage() {
                     )}
                   </div>
                   <div className="flex items-center gap-2">
-                    <span className="text-gray-600 text-xs">
+                    <span className="text-white text-xs">
                       {formatRelativeTime(entry.timestamp)}
                     </span>
                     <button
                       type="button"
-                      className="text-gray-600 hover:text-red-400 transition-colors"
+                      className="text-white hover:text-red-400 transition-colors"
                     >
                       <Heart className="w-4 h-4" />
                     </button>
@@ -124,7 +124,7 @@ export default function CommunityPage() {
                     <p className="text-white text-sm font-medium truncate">
                       {user.username}
                     </p>
-                    <p className="text-gray-500 text-xs">
+                    <p className="text-white text-xs">
                       Lv.{Number(user.level)} ·{" "}
                       {Number(user.xp).toLocaleString()} XP
                     </p>

@@ -181,7 +181,7 @@ export default function ProfilePage() {
                 </SelectTrigger>
                 <SelectContent className="bg-[#0a0a1a] border-white/20">
                   {FITNESS_GOALS.map((g) => (
-                    <SelectItem key={g} value={g} className="text-gray-300">
+                    <SelectItem key={g} value={g} className="text-white">
                       {g}
                     </SelectItem>
                   ))}
@@ -200,7 +200,7 @@ export default function ProfilePage() {
                   type="button"
                   onClick={() => setEditing(false)}
                   data-ocid="profile.cancel_button"
-                  className="text-gray-400 hover:text-white px-3 py-2 rounded-lg border border-white/20 text-sm"
+                  className="text-white hover:text-white px-3 py-2 rounded-lg border border-white/20 text-sm"
                 >
                   <X className="w-4 h-4" />
                 </button>
@@ -211,10 +211,10 @@ export default function ProfilePage() {
               <h1 className="font-orbitron font-black text-3xl text-white mb-2">
                 {profile.username || "Warrior"}
               </h1>
-              <p className="text-gray-400 mb-3">{profile.fitnessGoal}</p>
+              <p className="text-white mb-3">{profile.fitnessGoal}</p>
               <div className="flex flex-wrap items-center gap-3">
                 <LevelBadge level={level} />
-                <span className="text-gray-400 text-sm">
+                <span className="text-white text-sm">
                   {xp.toLocaleString()} XP
                 </span>
                 <span className="text-orange-400 text-sm">
@@ -255,7 +255,7 @@ export default function ProfilePage() {
                 }`}
               >
                 <div className="text-2xl mb-1">{ach.icon}</div>
-                <div className="text-xs text-gray-400 font-exo">{ach.name}</div>
+                <div className="text-xs text-white font-exo">{ach.name}</div>
               </motion.div>
             );
           })}
@@ -323,7 +323,7 @@ export default function ProfilePage() {
                     <div className="text-sm text-white font-exo">
                       {exerciseMap.get(log.exerciseId.toString()) || "Workout"}
                     </div>
-                    <div className="text-xs text-gray-500">
+                    <div className="text-xs text-white">
                       {formatTimestamp(log.completedAt)}
                     </div>
                   </div>
@@ -347,7 +347,7 @@ export default function ProfilePage() {
         <h2 className="font-orbitron font-bold text-white text-lg mb-2">
           🎨 Themes
         </h2>
-        <p className="text-gray-500 text-sm font-exo mb-6">
+        <p className="text-white text-sm font-exo mb-6">
           Unlock new visual styles as you level up.
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -389,7 +389,7 @@ export default function ProfilePage() {
                       {theme.name}
                     </div>
                     {!unlocked && (
-                      <div className="text-xs text-gray-500 flex items-center gap-1">
+                      <div className="text-xs text-white flex items-center gap-1">
                         <Lock className="w-3 h-3" /> Level {theme.unlockLevel}
                       </div>
                     )}
@@ -424,7 +424,7 @@ export default function ProfilePage() {
                     </motion.button>
                   )
                 ) : (
-                  <div className="w-full py-2 rounded-lg text-center text-xs font-exo text-gray-600 border border-white/5">
+                  <div className="w-full py-2 rounded-lg text-center text-xs font-exo text-white border border-white/5">
                     🔒 Unlock at Level {theme.unlockLevel}
                   </div>
                 )}
@@ -442,7 +442,7 @@ export default function ProfilePage() {
         <h2 className="font-orbitron font-bold text-white text-lg mb-2">
           🔔 Notifications
         </h2>
-        <p className="text-gray-500 text-sm font-exo mb-6">
+        <p className="text-white text-sm font-exo mb-6">
           Control which alerts you receive.
         </p>
         <div className="space-y-5">
@@ -483,7 +483,7 @@ export default function ProfilePage() {
                   <Label className="text-white font-exo font-medium cursor-pointer">
                     {label}
                   </Label>
-                  <p className="text-xs text-gray-500">{description}</p>
+                  <p className="text-xs text-white">{description}</p>
                 </div>
               </div>
               <Switch

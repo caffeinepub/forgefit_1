@@ -109,15 +109,15 @@ function ChallengeCard({ ch, index }: { ch: StaticChallenge; index: number }) {
       <h3 className="font-exo font-bold text-white text-base mb-1">
         {ch.name}
       </h3>
-      <p className="text-gray-400 text-xs mb-2 flex-1">{ch.description}</p>
-      <p className="text-gray-500 text-xs mb-4">
+      <p className="text-white text-xs mb-2 flex-1">{ch.description}</p>
+      <p className="text-white text-xs mb-4">
         {ch.durationDays} days &middot; Target:{" "}
         {ch.targetCount.toLocaleString()} {ch.unit}
       </p>
 
       {joined ? (
         <div>
-          <div className="flex justify-between text-xs text-gray-500 mb-1">
+          <div className="flex justify-between text-xs text-white mb-1">
             <span>
               {progress.toLocaleString()} / {ch.targetCount.toLocaleString()}{" "}
               {ch.unit}
@@ -202,7 +202,7 @@ export default function ChallengesPage() {
         <h1 className="font-orbitron font-black text-3xl text-white mb-2">
           <span style={{ color: "#ff006e" }}>Challenges</span>
         </h1>
-        <p className="text-gray-400">
+        <p className="text-white">
           {CHALLENGES.length} challenges. Compete, complete, conquer. Earn XP
           and badges.
         </p>
@@ -211,7 +211,7 @@ export default function ChallengesPage() {
       {/* Filters */}
       <div className="flex flex-col sm:flex-row gap-3 mb-8">
         <div className="relative flex-1">
-          <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-500" />
+          <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-300" />
           <Input
             placeholder="Search challenges..."
             value={search}
@@ -221,7 +221,7 @@ export default function ChallengesPage() {
           />
         </div>
         <div className="flex items-center gap-2">
-          <Filter className="w-4 h-4 text-gray-500" />
+          <Filter className="w-4 h-4 text-gray-300" />
           <select
             value={category}
             onChange={(e) => setCategory(e.target.value)}
@@ -282,7 +282,7 @@ export default function ChallengesPage() {
       {/* Grid */}
       {filtered.length === 0 ? (
         <div className="text-center py-24" data-ocid="challenges.empty_state">
-          <p className="text-gray-400 text-lg">No challenges found</p>
+          <p className="text-white text-lg">No challenges found</p>
           <button
             type="button"
             onClick={() => {
@@ -297,7 +297,7 @@ export default function ChallengesPage() {
         </div>
       ) : (
         <>
-          <p className="text-gray-500 text-sm mb-4">
+          <p className="text-white text-sm mb-4">
             Showing {filtered.length} challenges
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">

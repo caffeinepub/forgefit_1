@@ -62,7 +62,7 @@ function ReactionGame() {
         }}
       >
         {state === "idle" && (
-          <p className="text-gray-400 font-exo">Click to Start</p>
+          <p className="text-white font-exo">Click to Start</p>
         )}
         {state === "waiting" && (
           <p className="text-[#ff006e] font-exo font-bold text-lg">
@@ -85,7 +85,7 @@ function ReactionGame() {
             >
               {reactionTime}ms
             </p>
-            <p className="text-gray-400 text-sm mt-1">Click to try again</p>
+            <p className="text-white text-sm mt-1">Click to try again</p>
           </div>
         )}
         {state === "too_early" && (
@@ -96,12 +96,12 @@ function ReactionGame() {
             >
               Too Early!
             </p>
-            <p className="text-gray-400 text-sm mt-1">Click to try again</p>
+            <p className="text-white text-sm mt-1">Click to try again</p>
           </div>
         )}
       </div>
       {best && (
-        <p className="text-gray-500 text-sm mt-2 text-center">
+        <p className="text-white text-sm mt-2 text-center">
           Best: <span style={{ color: "#00d4ff" }}>{best}ms</span>
         </p>
       )}
@@ -173,7 +173,7 @@ function ReflexTest() {
             </p>
           )}
           {gameState === "done" && (
-            <p className="text-gray-400 mb-4">targets hit!</p>
+            <p className="text-white mb-4">targets hit!</p>
           )}
           <motion.button
             whileHover={{ scale: 1.05 }}
@@ -334,14 +334,14 @@ function FitnessQuiz() {
           >
             {score}/10
           </p>
-          <p className="text-gray-400 mb-2">
+          <p className="text-white mb-2">
             {score >= 7
               ? "Excellent! 🏆"
               : score >= 5
                 ? "Good job! ⭐"
                 : "Keep learning! 💪"}
           </p>
-          <p className="text-gray-500 text-sm mb-6">
+          <p className="text-white text-sm mb-6">
             {Math.round(score * 10)}% correct
           </p>
           <button
@@ -362,7 +362,7 @@ function FitnessQuiz() {
       <h3 className="font-exo font-bold text-white text-lg mb-2">
         🦾 Fitness Quiz
       </h3>
-      <p className="text-gray-500 text-xs mb-4">
+      <p className="text-white text-xs mb-4">
         {current + 1} / {QUIZ_QUESTIONS.length}
       </p>
       <div
@@ -384,7 +384,7 @@ function FitnessQuiz() {
             type="button"
             key={opt}
             onClick={() => setSelected(i)}
-            className={`w-full text-left px-4 py-3 rounded-xl text-sm font-medium transition-all duration-200 ${selected === i ? "" : "glass-card text-gray-300 hover:text-white"}`}
+            className={`w-full text-left px-4 py-3 rounded-xl text-sm font-medium transition-all duration-200 ${selected === i ? "" : "glass-card text-white hover:text-white"}`}
             style={
               selected === i
                 ? {
@@ -557,11 +557,11 @@ function DodgeGame() {
               >
                 {score}
               </p>
-              <p className="text-gray-400 mb-4">points survived!</p>
+              <p className="text-white mb-4">points survived!</p>
             </>
           )}
           {gameState === "idle" && (
-            <p className="text-gray-400 mb-4 text-sm">
+            <p className="text-white mb-4 text-sm">
               Use arrow keys / A D to dodge falling junk food!
             </p>
           )}
@@ -600,7 +600,7 @@ function DodgeGame() {
             className="rounded-xl w-full"
             style={{ maxHeight: "280px" }}
           />
-          <p className="text-gray-600 text-xs mt-2 text-center">
+          <p className="text-white text-xs mt-2 text-center">
             Arrow keys or A/D to move
           </p>
         </div>
@@ -632,7 +632,7 @@ export default function GamesPage() {
         <h1 className="font-orbitron font-black text-3xl text-white mb-2">
           Mini <span style={{ color: "#8b5cf6" }}>Games</span>
         </h1>
-        <p className="text-gray-400">
+        <p className="text-white">
           Train your reflexes and test your fitness knowledge
         </p>
       </div>
@@ -644,7 +644,7 @@ export default function GamesPage() {
             key={tab}
             onClick={() => setActiveTab(tab)}
             data-ocid="games.tab"
-            className={`px-4 py-2 rounded-lg text-sm font-medium transition-all ${activeTab === tab ? "" : "glass-card text-gray-400 hover:text-white"}`}
+            className={`px-4 py-2 rounded-lg text-sm font-medium transition-all ${activeTab === tab ? "" : "glass-card text-white hover:text-white"}`}
             style={
               activeTab === tab
                 ? {

@@ -11,7 +11,7 @@ export default function PrivacyPage() {
         <h1 className="font-orbitron font-black text-3xl text-white mb-2">
           Privacy <span style={{ color: "#00d4ff" }}>Policy</span>
         </h1>
-        <p className="text-gray-500 text-sm mb-8">Last updated: March 2026</p>
+        <p className="text-white text-sm mb-8">Last updated: March 2026</p>
 
         {[
           {
@@ -54,7 +54,7 @@ export default function PrivacyPage() {
             >
               {title}
             </h2>
-            <p className="text-gray-400 leading-relaxed">{body}</p>
+            <p className="text-white leading-relaxed">{body}</p>
           </div>
         ))}
       </motion.div>

@@ -42,7 +42,7 @@ export default function ExerciseDetailPage() {
     return (
       <div className="min-h-screen pt-24 flex items-center justify-center">
         <div className="text-center">
-          <p className="text-gray-400 text-xl mb-4">Exercise not found</p>
+          <p className="text-white text-xl mb-4">Exercise not found</p>
           <Link to="/exercises" className="btn-neon-blue px-6 py-3 rounded-xl">
             Back to Exercises
           </Link>
@@ -60,7 +60,7 @@ export default function ExerciseDetailPage() {
     >
       <Link
         to="/exercises"
-        className="inline-flex items-center gap-2 text-gray-400 hover:text-white transition-colors mb-8"
+        className="inline-flex items-center gap-2 text-white hover:text-white transition-colors mb-8"
       >
         <ArrowLeft className="w-4 h-4" /> Back to Exercises
       </Link>
@@ -74,14 +74,14 @@ export default function ExerciseDetailPage() {
           <div>
             <div className="flex items-center gap-3 mb-3">
               <TierBadge tier={exercise.tier} />
-              <span className="text-xs text-gray-500 capitalize">
+              <span className="text-xs text-white capitalize">
                 {exercise.difficulty}
               </span>
             </div>
             <h1 className="font-orbitron font-black text-3xl text-white mb-2">
               {exercise.name}
             </h1>
-            <p className="text-gray-400 capitalize">
+            <p className="text-white capitalize">
               {exercise.category} · {exercise.equipment}
             </p>
           </div>
@@ -92,7 +92,7 @@ export default function ExerciseDetailPage() {
             >
               +{xpReward} XP
             </div>
-            <p className="text-gray-500 text-sm">per completion</p>
+            <p className="text-white text-sm">per completion</p>
           </div>
         </div>
 
@@ -138,7 +138,7 @@ export default function ExerciseDetailPage() {
 
           <div className="glass-card rounded-2xl p-6">
             <h3 className="font-exo font-bold text-white mb-2">Equipment</h3>
-            <p className="text-gray-300">{exercise.equipment}</p>
+            <p className="text-white">{exercise.equipment}</p>
           </div>
 
           <div className="glass-card rounded-2xl p-6">
@@ -167,7 +167,7 @@ export default function ExerciseDetailPage() {
                   >
                     {stepIdx + 1}
                   </span>
-                  <span className="text-gray-300 text-sm leading-relaxed">
+                  <span className="text-white text-sm leading-relaxed">
                     {step}
                   </span>
                 </li>
@@ -182,7 +182,7 @@ export default function ExerciseDetailPage() {
               </h3>
               <ul className="space-y-2">
                 {exercise.commonMistakes.map((m) => (
-                  <li key={m} className="flex gap-2 text-sm text-gray-300">
+                  <li key={m} className="flex gap-2 text-sm text-white">
                     <AlertCircle
                       className="w-4 h-4 flex-shrink-0 mt-0.5"
                       style={{ color: "#ff006e" }}

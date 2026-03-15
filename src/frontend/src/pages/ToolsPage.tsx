@@ -44,7 +44,7 @@ function BMICalc() {
       </h3>
       <div className="space-y-3">
         <div>
-          <Label className="text-gray-400 text-xs">Height (cm)</Label>
+          <Label className="text-white text-xs">Height (cm)</Label>
           <Input
             value={height}
             onChange={(e) => setHeight(e.target.value)}
@@ -54,7 +54,7 @@ function BMICalc() {
           />
         </div>
         <div>
-          <Label className="text-gray-400 text-xs">Weight (kg)</Label>
+          <Label className="text-white text-xs">Weight (kg)</Label>
           <Input
             value={weight}
             onChange={(e) => setWeight(e.target.value)}
@@ -117,7 +117,7 @@ function TDEECalc() {
       <div className="space-y-3">
         <div className="grid grid-cols-3 gap-2">
           <div>
-            <Label className="text-gray-400 text-xs">Weight (kg)</Label>
+            <Label className="text-white text-xs">Weight (kg)</Label>
             <Input
               value={w}
               onChange={(e) => setW(e.target.value)}
@@ -127,7 +127,7 @@ function TDEECalc() {
             />
           </div>
           <div>
-            <Label className="text-gray-400 text-xs">Height (cm)</Label>
+            <Label className="text-white text-xs">Height (cm)</Label>
             <Input
               value={h}
               onChange={(e) => setH(e.target.value)}
@@ -137,7 +137,7 @@ function TDEECalc() {
             />
           </div>
           <div>
-            <Label className="text-gray-400 text-xs">Age</Label>
+            <Label className="text-white text-xs">Age</Label>
             <Input
               value={age}
               onChange={(e) => setAge(e.target.value)}
@@ -159,7 +159,7 @@ function TDEECalc() {
               ["1.725", "Very Active"],
               ["1.9", "Super Active"],
             ].map(([v, l]) => (
-              <SelectItem key={v} value={v} className="text-gray-300">
+              <SelectItem key={v} value={v} className="text-white">
                 {l}
               </SelectItem>
             ))}
@@ -186,7 +186,7 @@ function TDEECalc() {
             >
               {Math.round(tdee)}
             </p>
-            <p className="text-sm text-gray-400 mt-1">calories/day</p>
+            <p className="text-sm text-white mt-1">calories/day</p>
           </div>
         )}
       </div>
@@ -220,7 +220,7 @@ function MacroCalc() {
       </h3>
       <div className="space-y-3">
         <div>
-          <Label className="text-gray-400 text-xs">Daily Calories (TDEE)</Label>
+          <Label className="text-white text-xs">Daily Calories (TDEE)</Label>
           <Input
             value={calories}
             onChange={(e) => setCalories(e.target.value)}
@@ -234,13 +234,13 @@ function MacroCalc() {
             <SelectValue />
           </SelectTrigger>
           <SelectContent className="bg-[#0a0a1a] border-white/20">
-            <SelectItem value="bulk" className="text-gray-300">
+            <SelectItem value="bulk" className="text-white">
               Bulk (gain muscle)
             </SelectItem>
-            <SelectItem value="maintain" className="text-gray-300">
+            <SelectItem value="maintain" className="text-white">
               Maintain
             </SelectItem>
-            <SelectItem value="cut" className="text-gray-300">
+            <SelectItem value="cut" className="text-white">
               Cut (lose fat)
             </SelectItem>
           </SelectContent>
@@ -273,7 +273,7 @@ function MacroCalc() {
                 >
                   {val}g
                 </p>
-                <p className="text-xs text-gray-400 mt-1">{label}</p>
+                <p className="text-xs text-white mt-1">{label}</p>
               </div>
             ))}
           </div>
@@ -323,17 +323,17 @@ function BodyFatCalc() {
             <SelectValue />
           </SelectTrigger>
           <SelectContent className="bg-[#0a0a1a] border-white/20">
-            <SelectItem value="male" className="text-gray-300">
+            <SelectItem value="male" className="text-white">
               Male
             </SelectItem>
-            <SelectItem value="female" className="text-gray-300">
+            <SelectItem value="female" className="text-white">
               Female
             </SelectItem>
           </SelectContent>
         </Select>
         <div className="grid grid-cols-2 gap-2">
           <div>
-            <Label className="text-gray-400 text-xs">Neck (cm)</Label>
+            <Label className="text-white text-xs">Neck (cm)</Label>
             <Input
               value={neck}
               onChange={(e) => setNeck(e.target.value)}
@@ -342,7 +342,7 @@ function BodyFatCalc() {
             />
           </div>
           <div>
-            <Label className="text-gray-400 text-xs">Waist (cm)</Label>
+            <Label className="text-white text-xs">Waist (cm)</Label>
             <Input
               value={waist}
               onChange={(e) => setWaist(e.target.value)}
@@ -352,7 +352,7 @@ function BodyFatCalc() {
           </div>
           {gender === "female" && (
             <div>
-              <Label className="text-gray-400 text-xs">Hip (cm)</Label>
+              <Label className="text-white text-xs">Hip (cm)</Label>
               <Input
                 value={hip}
                 onChange={(e) => setHip(e.target.value)}
@@ -362,7 +362,7 @@ function BodyFatCalc() {
             </div>
           )}
           <div>
-            <Label className="text-gray-400 text-xs">Height (cm)</Label>
+            <Label className="text-white text-xs">Height (cm)</Label>
             <Input
               value={h}
               onChange={(e) => setH(e.target.value)}
@@ -392,7 +392,7 @@ function BodyFatCalc() {
             >
               {Math.max(0, bf).toFixed(1)}%
             </p>
-            <p className="text-sm text-gray-400 mt-1">Body Fat</p>
+            <p className="text-sm text-white mt-1">Body Fat</p>
           </div>
         )}
       </div>
@@ -568,7 +568,7 @@ function RestTimer() {
               type="button"
               key={s}
               onClick={() => start(s)}
-              className={`px-3 py-2 rounded-lg text-sm font-bold transition-all ${selected === s && running ? "btn-neon-cyan" : "glass-card text-gray-400 hover:text-white"}`}
+              className={`px-3 py-2 rounded-lg text-sm font-bold transition-all ${selected === s && running ? "btn-neon-cyan" : "glass-card text-white hover:text-white"}`}
             >
               {s}s
             </button>
@@ -625,7 +625,7 @@ function WaterTracker() {
             </span>
           </div>
         </div>
-        <p className="text-gray-400 text-sm mb-4">
+        <p className="text-white text-sm mb-4">
           {glasses < GOAL
             ? `${GOAL - glasses} more glasses to go`
             : "Daily goal reached! 🎉"}
@@ -691,7 +691,7 @@ function WeeklyPlanner() {
               {plan[day].map((ex) => (
                 <div
                   key={ex}
-                  className="text-xs text-gray-300 bg-white/5 rounded px-2 py-1 truncate"
+                  className="text-xs text-white bg-white/5 rounded px-2 py-1 truncate"
                 >
                   {ex}
                 </div>
@@ -730,7 +730,7 @@ export default function ToolsPage() {
         <h1 className="font-orbitron font-black text-3xl text-white mb-2">
           Fitness <span style={{ color: "#06ffd4" }}>Tools</span>
         </h1>
-        <p className="text-gray-400">
+        <p className="text-white">
           Professional calculators and trackers at your fingertips
         </p>
       </div>

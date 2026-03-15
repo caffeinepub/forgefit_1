@@ -19,7 +19,7 @@ export default function Footer() {
                 FORGEFIT
               </span>
             </div>
-            <p className="text-gray-400 text-sm leading-relaxed max-w-sm">
+            <p className="text-white text-sm leading-relaxed max-w-sm">
               The premium gamified fitness platform. Track your progress, earn
               XP, compete with others, and forge your ultimate strength.
             </p>
@@ -42,7 +42,7 @@ export default function Footer() {
                 <li key={link.to}>
                   <Link
                     to={link.to}
-                    className="text-gray-400 hover:text-[#00d4ff] transition-colors text-sm"
+                    className="text-white hover:text-[#00d4ff] transition-colors text-sm"
                   >
                     {link.label}
                   </Link>
@@ -65,7 +65,7 @@ export default function Footer() {
                 <li key={link.to}>
                   <Link
                     to={link.to}
-                    className="text-gray-400 hover:text-[#00d4ff] transition-colors text-sm"
+                    className="text-white hover:text-[#00d4ff] transition-colors text-sm"
                   >
                     {link.label}
                   </Link>
@@ -76,7 +76,7 @@ export default function Footer() {
         </div>
 
         <div className="mt-8 pt-6 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-3">
-          <p className="text-gray-500 text-sm">
+          <p className="text-white text-sm">
             &copy; {year}. Built with{" "}
             <Heart className="w-3 h-3 inline text-red-400" /> using{" "}
             <a
@@ -88,7 +88,7 @@ export default function Footer() {
               caffeine.ai
             </a>
           </p>
-          <div className="text-gray-600 text-xs">
+          <div className="text-white text-xs">
             ⚠️ Always consult a healthcare professional before starting any
             fitness program.
           </div>

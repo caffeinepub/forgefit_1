@@ -42,7 +42,7 @@ export default function AdminPage() {
           <h1 className="font-orbitron font-bold text-2xl text-white mb-2">
             Access Denied
           </h1>
-          <p className="text-gray-400">Admin privileges required</p>
+          <p className="text-white">Admin privileges required</p>
         </div>
       </div>
     );
@@ -54,7 +54,7 @@ export default function AdminPage() {
         <h1 className="font-orbitron font-black text-3xl text-white mb-2">
           Admin <span style={{ color: "#ff006e" }}>Panel</span>
         </h1>
-        <p className="text-gray-400">Manage platform content and users</p>
+        <p className="text-white">Manage platform content and users</p>
       </div>
 
       <Tabs defaultValue="exercises">
@@ -121,7 +121,7 @@ function ExercisesTab() {
                 (h) => (
                   <th
                     key={h}
-                    className="text-left px-4 py-3 text-gray-400 font-medium"
+                    className="text-left px-4 py-3 text-white font-medium"
                   >
                     {h}
                   </th>
@@ -136,13 +136,13 @@ function ExercisesTab() {
                 className="border-b border-white/5 hover:bg-white/[0.02] transition-colors"
               >
                 <td className="px-4 py-3 text-white font-medium">{ex.name}</td>
-                <td className="px-4 py-3 text-gray-400 capitalize">
+                <td className="px-4 py-3 text-white capitalize">
                   {ex.category}
                 </td>
                 <td className="px-4 py-3">
                   <TierBadge tier={ex.tier} />
                 </td>
-                <td className="px-4 py-3 text-gray-400 capitalize">
+                <td className="px-4 py-3 text-white capitalize">
                   {ex.difficulty}
                 </td>
                 <td className="px-4 py-3">
@@ -192,7 +192,7 @@ function UsersTab() {
                 (h) => (
                   <th
                     key={h}
-                    className="text-left px-4 py-3 text-gray-400 font-medium"
+                    className="text-left px-4 py-3 text-white font-medium"
                   >
                     {h}
                   </th>
@@ -207,9 +207,9 @@ function UsersTab() {
                 className="border-b border-white/5 hover:bg-white/[0.02]"
               >
                 <td className="px-4 py-3 text-white">{u.username}</td>
-                <td className="px-4 py-3 text-gray-400">{u.fitnessGoal}</td>
-                <td className="px-4 py-3 text-gray-400">{Number(u.level)}</td>
-                <td className="px-4 py-3 text-gray-400">
+                <td className="px-4 py-3 text-white">{u.fitnessGoal}</td>
+                <td className="px-4 py-3 text-white">{Number(u.level)}</td>
+                <td className="px-4 py-3 text-white">
                   {Number(u.xp).toLocaleString()}
                 </td>
                 <td className="px-4 py-3">
@@ -270,7 +270,7 @@ function ChallengesTab() {
                 (h) => (
                   <th
                     key={h}
-                    className="text-left px-4 py-3 text-gray-400 font-medium"
+                    className="text-left px-4 py-3 text-white font-medium"
                   >
                     {h}
                   </th>
@@ -286,7 +286,7 @@ function ChallengesTab() {
               >
                 <td className="px-4 py-3 text-2xl">{ch.badgeIcon}</td>
                 <td className="px-4 py-3 text-white">{ch.name}</td>
-                <td className="px-4 py-3 text-gray-400">
+                <td className="px-4 py-3 text-white">
                   {Number(ch.durationDays)}d
                 </td>
                 <td className="px-4 py-3" style={{ color: "#ff006e" }}>
@@ -334,7 +334,7 @@ function ReportsTab() {
       </div>
       {reports.length === 0 ? (
         <div
-          className="p-12 text-center text-gray-400"
+          className="p-12 text-center text-white"
           data-ocid="admin.empty_state"
         >
           No reports to review
@@ -347,8 +347,8 @@ function ReportsTab() {
               className="p-4 flex items-center justify-between gap-4"
             >
               <div>
-                <p className="text-gray-400 text-sm">{reason}</p>
-                <p className="text-gray-600 text-xs mt-0.5">
+                <p className="text-white text-sm">{reason}</p>
+                <p className="text-white text-xs mt-0.5">
                   Report #{id.toString()}
                 </p>
               </div>

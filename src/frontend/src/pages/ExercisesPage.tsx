@@ -47,7 +47,7 @@ export default function ExercisesPage() {
         <h1 className="font-orbitron font-black text-3xl text-white mb-2">
           Exercise <span style={{ color: "#8b5cf6" }}>Library</span>
         </h1>
-        <p className="text-gray-400">
+        <p className="text-white">
           {EXERCISES.length} exercises across all categories
         </p>
       </div>
@@ -64,7 +64,7 @@ export default function ExercisesPage() {
               className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
                 activeCategory === cat
                   ? "text-white"
-                  : "text-gray-400 glass-card hover:text-white"
+                  : "text-white glass-card hover:text-white"
               }`}
               style={
                 activeCategory === cat
@@ -84,7 +84,7 @@ export default function ExercisesPage() {
 
         <div className="flex flex-wrap gap-3">
           <div className="relative flex-1 min-w-48">
-            <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-500" />
+            <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-300" />
             <Input
               value={search}
               onChange={(e) => setSearch(e.target.value)}
@@ -96,7 +96,7 @@ export default function ExercisesPage() {
           <select
             value={filterTier}
             onChange={(e) => setFilterTier(e.target.value)}
-            className="px-3 py-2 rounded-lg text-sm text-gray-300 bg-white/5 border border-white/20 outline-none"
+            className="px-3 py-2 rounded-lg text-sm text-white bg-white/5 border border-white/20 outline-none"
           >
             {["All", "S", "A", "B", "C"].map((t) => (
               <option key={t} value={t} className="bg-[#0a0a1a]">
@@ -107,7 +107,7 @@ export default function ExercisesPage() {
           <select
             value={filterDiff}
             onChange={(e) => setFilterDiff(e.target.value)}
-            className="px-3 py-2 rounded-lg text-sm text-gray-300 bg-white/5 border border-white/20 outline-none"
+            className="px-3 py-2 rounded-lg text-sm text-white bg-white/5 border border-white/20 outline-none"
           >
             {["All", "Beginner", "Intermediate", "Advanced"].map((d) => (
               <option key={d} value={d} className="bg-[#0a0a1a]">
@@ -121,10 +121,8 @@ export default function ExercisesPage() {
       {/* Exercise Grid */}
       {filtered.length === 0 ? (
         <div className="text-center py-24" data-ocid="exercises.empty_state">
-          <p className="text-gray-400 text-lg">No exercises found</p>
-          <p className="text-gray-600 text-sm mt-2">
-            Try adjusting your filters
-          </p>
+          <p className="text-white text-lg">No exercises found</p>
+          <p className="text-white text-sm mt-2">Try adjusting your filters</p>
         </div>
       ) : (
         <motion.div
@@ -175,7 +173,7 @@ function ExerciseCard({
             <TierBadge tier={ex.tier} />
           </div>
           <div className="space-y-1.5">
-            <p className="text-xs text-gray-500 capitalize">
+            <p className="text-xs text-white capitalize">
               {ex.difficulty} · {ex.category}
             </p>
             <div className="flex flex-wrap gap-1">
@@ -192,7 +190,7 @@ function ExerciseCard({
                 </span>
               ))}
             </div>
-            <p className="text-xs text-gray-500">⚙️ {ex.equipment}</p>
+            <p className="text-xs text-white">⚙️ {ex.equipment}</p>
           </div>
         </div>
       </a>

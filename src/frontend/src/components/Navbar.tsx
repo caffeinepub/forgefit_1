@@ -15,6 +15,7 @@ const navLinks = [
   { label: "Tools", to: "/tools" },
   { label: "Games", to: "/games" },
   { label: "Wellness", to: "/wellness" },
+  { label: "Calisthenics", to: "/calisthenics" },
 ];
 
 export default function Navbar() {
@@ -41,7 +42,10 @@ export default function Navbar() {
           >
             <Dumbbell className="w-4 h-4" style={{ color: "#00d4ff" }} />
           </div>
-          <span className="font-orbitron font-black text-lg neon-text-blue tracking-wider">
+          <span
+            className="font-orbitron font-black text-lg neon-text-blue tracking-wider"
+            style={{ color: "#00d4ff" }}
+          >
             FORGEFIT
           </span>
         </Link>
@@ -56,7 +60,7 @@ export default function Navbar() {
               className={`px-3 py-1.5 rounded-md text-sm font-medium transition-all duration-200 ${
                 location.pathname === link.to
                   ? "text-[#00d4ff] bg-[rgba(0,212,255,0.1)]"
-                  : "text-gray-400 hover:text-white hover:bg-white/5"
+                  : "text-white hover:text-white hover:bg-white/5"
               }`}
             >
               {link.label}
@@ -71,7 +75,7 @@ export default function Navbar() {
               <Link
                 to="/messages"
                 data-ocid="nav.link"
-                className="text-gray-400 hover:text-white transition-colors text-sm"
+                className="text-white hover:text-white transition-colors text-sm"
               >
                 Messages
               </Link>
@@ -87,7 +91,7 @@ export default function Navbar() {
                 type="button"
                 onClick={() => clear()}
                 data-ocid="nav.button"
-                className="flex items-center gap-1 text-gray-400 hover:text-red-400 transition-colors text-sm"
+                className="flex items-center gap-1 text-white hover:text-red-400 transition-colors text-sm"
               >
                 <LogOut className="w-4 h-4" /> Logout
               </button>
@@ -99,6 +103,7 @@ export default function Navbar() {
               disabled={loginStatus === "logging-in"}
               data-ocid="nav.button"
               className="flex items-center gap-2 px-4 py-2 rounded-lg btn-neon-blue text-sm font-semibold"
+              style={{ color: "#00d4ff" }}
             >
               <LogIn className="w-4 h-4" /> Login
             </button>
@@ -110,7 +115,7 @@ export default function Navbar() {
           type="button"
           onClick={() => setOpen(!open)}
           data-ocid="nav.button"
-          className="lg:hidden p-2 rounded-md text-gray-400 hover:text-white"
+          className="lg:hidden p-2 rounded-md text-white hover:text-white"
         >
           {open ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
         </button>
@@ -131,7 +136,7 @@ export default function Navbar() {
                 to={link.to}
                 data-ocid="nav.link"
                 onClick={() => setOpen(false)}
-                className="block px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-white/5"
+                className="block px-3 py-2 rounded-md text-sm font-medium text-white hover:text-white hover:bg-white/5"
               >
                 {link.label}
               </Link>
@@ -169,6 +174,7 @@ export default function Navbar() {
                     setOpen(false);
                   }}
                   className="w-full px-3 py-2 rounded-lg btn-neon-blue text-sm font-semibold"
+                  style={{ color: "#00d4ff" }}
                 >
                   Login
                 </button>

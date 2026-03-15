@@ -76,7 +76,7 @@ export default function SafetyPage() {
               />
               <div>
                 <h3 className="font-exo font-bold text-white mb-1">{title}</h3>
-                <p className="text-gray-400 text-sm leading-relaxed">{desc}</p>
+                <p className="text-white text-sm leading-relaxed">{desc}</p>
               </div>
             </div>
           ))}
@@ -92,7 +92,7 @@ export default function SafetyPage() {
           <h3 className="font-exo font-bold text-white mb-3">
             Medical Disclaimer
           </h3>
-          <p className="text-gray-400 text-sm leading-relaxed">
+          <p className="text-white text-sm leading-relaxed">
             The information provided on FORGEFIT is for educational and
             informational purposes only and is not intended as medical advice.
             The content on this platform is not a substitute for professional

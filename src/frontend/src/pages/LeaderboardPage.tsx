@@ -45,7 +45,7 @@ export default function LeaderboardPage() {
         />
       );
     return (
-      <span className="text-gray-500 font-mono text-sm w-5 text-center">
+      <span className="text-white font-mono text-sm w-5 text-center">
         {rank}
       </span>
     );
@@ -57,7 +57,7 @@ export default function LeaderboardPage() {
         <h1 className="font-orbitron font-black text-3xl text-white mb-2">
           <span style={{ color: "#ffd700" }}>Leaderboard</span>
         </h1>
-        <p className="text-gray-400">Top warriors competing for glory</p>
+        <p className="text-white">Top warriors competing for glory</p>
       </div>
 
       {/* Tabs */}
@@ -69,9 +69,7 @@ export default function LeaderboardPage() {
             onClick={() => setActiveTab(tab)}
             data-ocid="leaderboard.tab"
             className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
-              activeTab === tab
-                ? ""
-                : "glass-card text-gray-400 hover:text-white"
+              activeTab === tab ? "" : "glass-card text-white hover:text-white"
             }`}
             style={
               activeTab === tab
@@ -104,7 +102,7 @@ export default function LeaderboardPage() {
         >
           {data.length === 0 ? (
             <div
-              className="p-12 text-center text-gray-400"
+              className="p-12 text-center text-white"
               data-ocid="leaderboard.empty_state"
             >
               No data yet. Be the first!
@@ -152,7 +150,7 @@ export default function LeaderboardPage() {
                     <p className="text-white font-medium truncate">
                       {user.username || "Unknown Warrior"}
                     </p>
-                    <p className="text-gray-500 text-xs capitalize">
+                    <p className="text-white text-xs capitalize">
                       {user.fitnessGoal}
                     </p>
                   </div>

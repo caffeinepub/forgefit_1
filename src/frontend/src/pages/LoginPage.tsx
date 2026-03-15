@@ -33,7 +33,7 @@ export default function LoginPage() {
           >
             Welcome Back
           </h1>
-          <p className="text-gray-400">Sign in to your FORGEFIT account</p>
+          <p className="text-white">Sign in to your FORGEFIT account</p>
         </div>
 
         <div
@@ -43,13 +43,13 @@ export default function LoginPage() {
             border: "1px solid rgba(0,212,255,0.2)",
           }}
         >
-          <p className="text-gray-300 text-sm mb-4">
+          <p className="text-white text-sm mb-4">
             FORGEFIT uses{" "}
             <strong className="text-[#00d4ff]">Internet Identity</strong> — a
             secure, passwordless authentication system. No email or password
             required.
           </p>
-          <ul className="text-gray-400 text-sm space-y-1">
+          <ul className="text-white text-sm space-y-1">
             <li>✔ No passwords to remember</li>
             <li>✔ Cryptographically secure</li>
             <li>✔ Your data stays on-chain</li>
@@ -75,7 +75,7 @@ export default function LoginPage() {
           )}
         </motion.button>
 
-        <p className="text-center text-gray-500 text-sm mt-6">
+        <p className="text-center text-white text-sm mt-6">
           New to FORGEFIT?{" "}
           <a href="/register" className="text-[#8b5cf6] hover:underline">
             Create an account

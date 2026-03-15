@@ -119,7 +119,7 @@ export default function MessagesPage() {
                 <p className="text-white text-sm font-medium truncate">
                   {user.username}
                 </p>
-                <p className="text-gray-500 text-xs">Lv.{Number(user.level)}</p>
+                <p className="text-white text-xs">Lv.{Number(user.level)}</p>
               </div>
             </button>
           ))}
@@ -152,14 +152,14 @@ export default function MessagesPage() {
               <DropdownMenu>
                 <DropdownMenuTrigger
                   data-ocid="messages.dropdown_menu"
-                  className="p-2 rounded-lg hover:bg-white/10 text-gray-400 hover:text-white"
+                  className="p-2 rounded-lg hover:bg-white/10 text-white hover:text-white"
                 >
                   <MoreVertical className="w-5 h-5" />
                 </DropdownMenuTrigger>
                 <DropdownMenuContent className="bg-[#0a0a1a] border-white/20">
                   <DropdownMenuItem
                     onClick={handleBlock}
-                    className="text-gray-300 focus:bg-white/10 cursor-pointer"
+                    className="text-white focus:bg-white/10 cursor-pointer"
                   >
                     <Shield className="w-4 h-4 mr-2" /> Block User
                   </DropdownMenuItem>
@@ -180,7 +180,7 @@ export default function MessagesPage() {
                   <NeonLoader />
                 </div>
               ) : messages.length === 0 ? (
-                <div className="text-center py-12 text-gray-500">
+                <div className="text-center py-12 text-white">
                   No messages yet. Say hello!
                 </div>
               ) : (
@@ -247,7 +247,7 @@ export default function MessagesPage() {
           <div className="flex-1 flex items-center justify-center">
             <div className="text-center">
               <div className="text-4xl mb-3">💬</div>
-              <p className="text-gray-400">Select a user to start chatting</p>
+              <p className="text-white">Select a user to start chatting</p>
             </div>
           </div>
         )}

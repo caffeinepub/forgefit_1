@@ -1,7 +1,8 @@
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { useNavigate } from "@tanstack/react-router";
-import confetti from "canvas-confetti";
+// canvas-confetti replaced with inline stub
+const confetti = (_opts: Record<string, unknown>) => {};
 import { Flame, Star, Target, TrendingUp, Zap } from "lucide-react";
 import { AnimatePresence, motion } from "motion/react";
 import { useEffect, useState } from "react";
@@ -261,7 +262,7 @@ function BodySilhouette({
                 border: `1px solid ${s.color}30`,
               }}
             >
-              <div className="text-xs text-gray-400 mb-1">{s.label}</div>
+              <div className="text-xs text-cyan-400 mb-1">{s.label}</div>
               <div
                 className="font-orbitron font-bold text-sm"
                 style={{ color: s.color }}
@@ -285,7 +286,7 @@ function AnimatedXPBar({
   return (
     <div>
       <div className="flex justify-between items-center mb-2">
-        <span className="text-xs text-gray-400 font-exo">Level {level}</span>
+        <span className="text-xs text-cyan-400 font-exo">Level {level}</span>
         <span
           className="text-xs font-exo"
           style={{ color: "var(--theme-accent, #00d4ff)" }}
@@ -466,7 +467,7 @@ export default function DashboardPage() {
             >
               LEVEL UP!
             </div>
-            <div className="font-exo text-gray-300 mt-1">
+            <div className="font-exo text-white mt-1">
               You reached Level {level}!
             </div>
           </motion.div>
@@ -487,7 +488,7 @@ export default function DashboardPage() {
                 {profile.username}
               </span>
             </h1>
-            <p className="text-gray-400 font-exo mt-1">
+            <p className="text-white font-exo mt-1">
               {getLevelTitle(level)} •{" "}
               {streak > 0
                 ? `🔥 ${streak}-day streak`
@@ -541,7 +542,7 @@ export default function DashboardPage() {
               style={{ color: s.color }}
             >
               {s.icon}
-              <span className="text-xs text-gray-400 font-exo">{s.label}</span>
+              <span className="text-xs text-cyan-400 font-exo">{s.label}</span>
             </div>
             <div
               className="font-orbitron font-black text-2xl"
@@ -574,7 +575,7 @@ export default function DashboardPage() {
           max={xpData.needed}
           level={level}
         />
-        <div className="mt-3 text-xs text-gray-500 font-exo">
+        <div className="mt-3 text-xs text-white font-exo">
           {xpData.needed - xpData.current} XP to Level {level + 1}
         </div>
       </motion.div>
@@ -603,7 +604,7 @@ export default function DashboardPage() {
             <p className="font-exo text-white text-base italic leading-relaxed">
               &ldquo;{dailyQuote.text}&rdquo;
             </p>
-            <p className="text-gray-500 text-sm mt-2 font-exo">
+            <p className="text-white text-sm mt-2 font-exo">
               — {dailyQuote.author}
             </p>
           </div>
@@ -643,9 +644,7 @@ export default function DashboardPage() {
               { label: "Biceps (cm)", val: biceps, set: setBiceps },
             ].map(({ label, val, set }) => (
               <div key={label}>
-                <Label className="text-gray-400 text-xs mb-1 block">
-                  {label}
-                </Label>
+                <Label className="text-white text-xs mb-1 block">{label}</Label>
                 <Input
                   type="number"
                   value={val}
@@ -887,7 +886,7 @@ export default function DashboardPage() {
                     <div className="text-sm text-white font-exo">
                       Workout #{i + 1}
                     </div>
-                    <div className="text-xs text-gray-500">
+                    <div className="text-xs text-white">
                       {formatTimestamp(log.completedAt)}
                     </div>
                   </div>

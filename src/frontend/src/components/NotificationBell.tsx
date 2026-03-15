@@ -70,7 +70,7 @@ export default function NotificationBell() {
         type="button"
         onClick={() => setOpen((v) => !v)}
         data-ocid="notifications.button"
-        className="relative p-2 rounded-lg text-gray-400 hover:text-white transition-colors hover:bg-white/5"
+        className="relative p-2 rounded-lg text-white hover:text-white transition-colors hover:bg-white/5"
         aria-label="Notifications"
       >
         <Bell className="w-5 h-5" />
@@ -110,7 +110,7 @@ export default function NotificationBell() {
                     type="button"
                     onClick={() => markAllRead.mutate()}
                     data-ocid="notifications.button"
-                    className="text-xs text-gray-400 hover:text-white transition-colors"
+                    className="text-xs text-white hover:text-white transition-colors"
                   >
                     Mark all read
                   </button>
@@ -119,7 +119,7 @@ export default function NotificationBell() {
                   type="button"
                   onClick={() => setOpen(false)}
                   data-ocid="notifications.close_button"
-                  className="text-gray-500 hover:text-white"
+                  className="text-white hover:text-white"
                 >
                   <X className="w-4 h-4" />
                 </button>
@@ -134,7 +134,7 @@ export default function NotificationBell() {
                   data-ocid="notifications.empty_state"
                 >
                   <div className="text-3xl mb-2">🔔</div>
-                  <p className="text-gray-500 text-sm">No alerts yet</p>
+                  <p className="text-white text-sm">No alerts yet</p>
                 </div>
               ) : (
                 <motion.ul
@@ -161,12 +161,12 @@ export default function NotificationBell() {
                       <div className="flex-1 min-w-0">
                         <p
                           className={`text-sm leading-snug truncate ${
-                            !n.isRead ? "text-white" : "text-gray-400"
+                            !n.isRead ? "text-white" : "text-white"
                           }`}
                         >
                           {n.message}
                         </p>
-                        <p className="text-xs text-gray-600 mt-0.5">
+                        <p className="text-xs text-white mt-0.5">
                           {formatRelTime(n.timestamp)}
                         </p>
                       </div>
